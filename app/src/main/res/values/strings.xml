@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Мой рецептник</string>
+
+    <string name="menu_groups">Группы рецептов</string>
+    <string name="menu_favourites">Избранное</string>
+    <string name="menu_load_all">Загрузить рецепты</string>
+    <string name="menu_load_new">Загрузить новые</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_search">Search</string>
+
+    <string name="group_empty_state_msg">No groups were found</string>
+    <string name="favourites_empty_state_msg">No favourites were found</string>
+    <string name="cook_time">%s мин.</string>
+    <string name="ingredients">Ингредиенты:</string>
+    <string name="cooking">Приготовление:</string>
+    <string name="cooking_steps_load"><u>Загрузить данные этапов приготовления</u></string>
+    <string name="cooking_steps_delete"><u>Удалить данные этапов приготовления</u></string>
+
+    <string name="add_to_favourites">Добавлено в Favourites</string>
+    <string name="remove_from_favourites">Удалено из Favourites</string>
+
+    <string name="search_hint">Поиск</string>
+    <string name="search_title">Поиск...</string>
+    <string name="search_results">Результаты:</string>
+
+</resources>

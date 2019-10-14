@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="empty_list_msg_padding">30dp</dimen>
+    <dimen name="cooking_step_img_padding_bottom">6dp</dimen>
+    <dimen name="cooking_step_img_padding_right">4dp</dimen>
+    <!-- Recipe Details -->
+    <dimen name="details_main_img_height">260dp</dimen>
+    <dimen name="details_content_padding">16dp</dimen>
+    <dimen name="recipe_name_text_size">23sp</dimen>
+    <dimen name="details_subtitle_text_size">20sp</dimen>
+    <dimen name="details_content_text_size">18sp</dimen>
+    <!-- Drawer -->
+    <dimen name="drawer_img_width">150dp</dimen>
+    <dimen name="drawer_img_height">158dp</dimen>
+    <dimen name="drawer_list_title_padding">14dp</dimen>
+    <dimen name="drawer_list_text_size">18sp</dimen>
+    <!-- Favourites -->
+    <dimen name="favourites_content_padding">16dp</dimen>
+    <dimen name="list_title_padding">14dp</dimen>
+    <dimen name="subgroup_list_item_padding">12dp</dimen>
+    <dimen name="list_item_text_size">16sp</dimen>
+    <!-- Recipe List Item -->
+    <dimen name="recipe_list_item_padding">7dp</dimen>
+    <dimen name="recipe_list_img_width">100dp</dimen>
+    <dimen name="recipe_list_img_height">75dp</dimen>
+    <dimen name="recipe_list_name_size">20sp</dimen>
+    <dimen name="recipe_list_content_size">18sp</dimen>
+</resources>

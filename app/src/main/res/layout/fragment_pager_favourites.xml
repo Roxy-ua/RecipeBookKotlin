@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/favourites_content_padding"
+                android:paddingLeft="@dimen/favourites_content_padding"
+                android:paddingRight="@dimen/favourites_content_padding">
+
+                <ImageView
+                    android:id="@+id/dishImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/details_main_img_height"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/recName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/recipe_name_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/ingredients"
+                    android:textColor="@color/black_brown"
+                    android:textSize="@dimen/details_subtitle_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recIng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:textColor="@color/black_brown"
+                    android:textSize="@dimen/details_content_text_size" />
+
+                <TextView
+                    android:id="@+id/recSmr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/details_content_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/cooking"
+                    android:textColor="@color/black_brown"
+                    android:textSize="@dimen/details_subtitle_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recDsc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:singleLine="false"
+                    android:textColor="@color/black_brown"
+                    android:textSize="@dimen/details_content_text_size"
+                    android:textStyle="italic" />
+
+                <TableLayout
+                    android:id="@+id/stepsTableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/loadCookingSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:text="@string/cooking_steps_load"
+                    android:textColor="@color/black_brown"
+                    android:textSize="@dimen/details_content_text_size" />
+            </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

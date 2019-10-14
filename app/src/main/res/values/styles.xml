@@ -1,0 +1,84 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:itemBackground">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="ListTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextTitle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">
+            @android:style/TextAppearance.Medium
+        </item>
+        <item name="android:background">@drawable/list_selector</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@drawable/text_selector</item>
+    </style>
+
+    <style name="DrawerViewStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:listPreferredItemHeightSmall">60dp</item>
+    </style>
+
+    <style name="FabStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="elevation">6dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+    </style>
+
+    <!--<item name="android:src">@drawable/ic_favorite_off</item>-->
+
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--<style name="MyTheme" parent="@android:style/Theme.Holo.Light">-->
+    <!--<item name="android:actionBarStyle">@style/MyTheme.ActionBarStyle</item>-->
+    <!--<item name="android:windowBackground">@color/custom_theme_color</item> -->
+    <!--<item name="android:colorBackground">@color/custom_theme_color</item>-->
+    <!--<item name="android:dropDownListViewStyle">@drawable/list_selector</item>				    	-->
+    <!--</style>-->
+
+    <!--<style name="CtgListView" parent="@android:Widget.ExpandableListView">-->
+    <!--<item name="android:background">@color/custom_theme_color</item>-->
+    <!--<item name="android:listSelector">@drawable/list_selector</item>-->
+    <!--<item name="android:cacheColorHint">@color/custom_theme_color</item>-->
+    <!--<item name="android:fastScrollEnabled">true</item>-->
+    <!--<item name="android:footerDividersEnabled">false</item>-->
+    <!--<item name="android:divider">@drawable/list_divider</item>-->
+    <!--<item name="android:dividerHeight">1px</item>		-->
+    <!--</style>-->
+
+    <!--<style name="RecListView" parent="@android:Widget.ListView">-->
+    <!--<item name="android:background">@color/custom_theme_color</item>-->
+    <!--<item name="android:listSelector">@drawable/list_seltor_rec</item>-->
+    <!--<item name="android:cacheColorHint">@color/custom_theme_color</item>-->
+    <!--<item name="android:fastScrollEnabled">true</item>-->
+    <!--<item name="android:footerDividersEnabled">false</item>-->
+    <!--</style>-->
+
+
+</resources>

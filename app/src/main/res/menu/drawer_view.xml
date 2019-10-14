@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_groups"
+            android:icon="@drawable/ic_group_list"
+            android:title="@string/menu_groups" />
+        <item
+            android:id="@+id/nav_favourites"
+            android:icon="@drawable/ic_drawer_favorite"
+            android:title="@string/menu_favourites" />
+        <item
+            android:id="@+id/nav_load_recipe"
+            android:icon="@drawable/ic_load_all"
+            android:title="@string/menu_load_all" />
+        <item
+            android:id="@+id/nav_load_new_recipe"
+            android:icon="@drawable/ic_load_new"
+            android:title="@string/menu_load_new" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/menu_settings" />
+    </group>
+</menu>
