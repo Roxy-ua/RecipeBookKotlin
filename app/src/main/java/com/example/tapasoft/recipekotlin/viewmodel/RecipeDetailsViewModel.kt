@@ -1,27 +1,22 @@
 package com.example.tapasoft.recipekotlin.viewmodel
 
-import android.app.Application
 import android.content.Context
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.tapasoft.recipekotlin.api.ApiClient
-import com.example.tapasoft.recipekotlin.database.RecipeRoomDatabase
+import androidx.lifecycle.ViewModel
 import com.example.tapasoft.recipekotlin.model.CookingStep
 import com.example.tapasoft.recipekotlin.repository.RecipeRepository
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
-class RecipeDetailsViewModel(application: Application) : AndroidViewModel(application) {
+class RecipeDetailsViewModel(private val repository: RecipeRepository = RecipeRepository()) :
+        ViewModel() {
     private val parentJob = Job()
 
     private val coroutineContext: CoroutineContext
         get() = parentJob + Dispatchers.IO
 
     private val scope = CoroutineScope(coroutineContext)
-
-    val recipeDao = RecipeRoomDatabase.getDatabase(application).recipeDao()
-    private val repository = RecipeRepository(ApiClient.clientApi, recipeDao)
 
     val cookingStepListLiveData = MutableLiveData<List<CookingStep>>()
     private val isDeletedLiveData = MutableLiveData<Boolean>()
@@ -53,6 +48,7 @@ class RecipeDetailsViewModel(application: Application) : AndroidViewModel(applic
             repository.deleteCookingStepsByRecId(rcpId)
             isDeletedLiveData.postValue(true)
         }
+        //isDeletedLiveData.value = false
     }
 
     fun fetchCookingStepsFromDB(rcpId: Int) {
@@ -91,9 +87,7 @@ class RecipeDetailsViewModel(application: Application) : AndroidViewModel(applic
         return sb.toString()
     }
 
-    fun areStepsDeleted(): LiveData<Boolean> {
-        return isDeletedLiveData
-    }
+    fun areStepsDeleted(): LiveData<Boolean> = isDeletedLiveData
 
     fun cancelAllRequests() = coroutineContext.cancel()
 }

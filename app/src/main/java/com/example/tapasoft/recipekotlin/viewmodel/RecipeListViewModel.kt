@@ -1,19 +1,17 @@
 package com.example.tapasoft.recipekotlin.viewmodel
 
-import android.app.Application
 import android.content.Context
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.tapasoft.recipekotlin.R
-import com.example.tapasoft.recipekotlin.api.ApiClient
-import com.example.tapasoft.recipekotlin.database.RecipeRoomDatabase
 import com.example.tapasoft.recipekotlin.model.CookingStep
 import com.example.tapasoft.recipekotlin.model.Recipe
 import com.example.tapasoft.recipekotlin.repository.RecipeRepository
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
-class RecipeListViewModel(application: Application) : AndroidViewModel(application) {
+class RecipeListViewModel(private val repository: RecipeRepository = RecipeRepository()) :
+        ViewModel() {
     private val parentJob = Job()
 
     private val coroutineContext: CoroutineContext
@@ -21,8 +19,6 @@ class RecipeListViewModel(application: Application) : AndroidViewModel(applicati
 
     private val scope = CoroutineScope(coroutineContext)
 
-    val recipeDao = RecipeRoomDatabase.getDatabase(application).recipeDao()
-    private val repository = RecipeRepository(ApiClient.clientApi, recipeDao)
     val recipeListLiveData = MutableLiveData<List<Recipe>>()
 
     fun fetchRecipeListFromDB(groupId: Int, subgroupId: Int, context: Context) {

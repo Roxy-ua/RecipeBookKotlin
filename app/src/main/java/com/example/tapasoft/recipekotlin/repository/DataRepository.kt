@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.tapasoft.recipekotlin.Config
-import com.example.tapasoft.recipekotlin.api.ApiInterface
 import com.example.tapasoft.recipekotlin.database.DataDao
+import com.example.tapasoft.recipekotlin.db
 import com.example.tapasoft.recipekotlin.model.*
 import java.io.File
 import java.io.FileOutputStream
@@ -15,7 +15,8 @@ import java.net.URL
 /**
  * Created by udav on 27-Jul-19.
  */
-class DataRepository(private val api: ApiInterface, private val dataDao: DataDao) : BaseRepository() {
+class DataRepository() : BaseRepository() {
+    private val dataDao: DataDao = db.dataDao()
     private val isLoadedLiveData = MutableLiveData<Boolean>()
 
     suspend fun getGroups(): List<Group>? {

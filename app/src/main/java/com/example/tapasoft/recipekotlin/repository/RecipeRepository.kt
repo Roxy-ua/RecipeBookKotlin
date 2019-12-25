@@ -3,10 +3,9 @@ package com.example.tapasoft.recipekotlin.repository
 import android.content.Context
 import com.example.tapasoft.recipekotlin.Config
 import com.example.tapasoft.recipekotlin.activity.RecipeDetailsActivity.Companion.FAVOURITE_ON
-import com.example.tapasoft.recipekotlin.api.ApiInterface
 import com.example.tapasoft.recipekotlin.database.RecipeDao
+import com.example.tapasoft.recipekotlin.db
 import com.example.tapasoft.recipekotlin.model.CookingStep
-import com.example.tapasoft.recipekotlin.model.MeasureUnit
 import com.example.tapasoft.recipekotlin.model.Recipe
 import com.example.tapasoft.recipekotlin.model.RecipeIngredient
 import java.io.File
@@ -14,7 +13,8 @@ import java.io.FileOutputStream
 import java.net.HttpURLConnection
 import java.net.URL
 
-class RecipeRepository(private val api: ApiInterface, private val recipeDao: RecipeDao) : BaseRepository() {
+class RecipeRepository() : BaseRepository() {
+    private val recipeDao: RecipeDao = db.recipeDao()
 
     fun selectRecipesByGrpSgpId(groupId: Int, subgroupId: Int): List<Recipe> {
         if(subgroupId == 0) return recipeDao.findRecipesByGrpId(groupId)

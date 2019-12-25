@@ -1,6 +1,7 @@
 package com.example.tapasoft.recipekotlin.repository
 
 import android.util.Log
+import com.example.tapasoft.recipekotlin.api.ApiClient
 import retrofit2.Response
 import java.io.IOException
 
@@ -8,6 +9,7 @@ import java.io.IOException
  * Created by udav on 27-Jul-19.
  */
 open class BaseRepository{
+    protected val api = ApiClient.clientApi
 
     suspend fun <T : Any> safeApiCall(call: suspend () -> Response<T>, errorMessage: String): T? {
 
