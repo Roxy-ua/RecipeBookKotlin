@@ -6,10 +6,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.tapasoft.recipekotlin.model.CookingStep
 import com.example.tapasoft.recipekotlin.repository.RecipeRepository
+import com.example.tapasoft.recipekotlin.repository.RecipeRepositoryImpl
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
-class RecipeDetailsViewModel(private val repository: RecipeRepository = RecipeRepository()) :
+class RecipeDetailsViewModel(private val repository: RecipeRepository = RecipeRepositoryImpl()) :
         ViewModel() {
     private val parentJob = Job()
 

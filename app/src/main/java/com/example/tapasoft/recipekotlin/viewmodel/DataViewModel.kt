@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.example.tapasoft.recipekotlin.model.Group
 import com.example.tapasoft.recipekotlin.model.Subgroup
 import com.example.tapasoft.recipekotlin.repository.DataRepository
+import com.example.tapasoft.recipekotlin.repository.DataRepositoryImpl
 import kotlinx.coroutines.*
 import java.util.*
 import kotlin.coroutines.CoroutineContext
@@ -14,7 +15,7 @@ import kotlin.coroutines.CoroutineContext
 /**
  * Created by udav on 27-Jul-19.
  */
-class DataViewModel(private val repository: DataRepository = DataRepository()) : ViewModel() {
+class DataViewModel(private val repository: DataRepository = DataRepositoryImpl()) : ViewModel() {
 
     private val parentJob = Job()
 
